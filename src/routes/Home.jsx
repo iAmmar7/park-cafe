@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { isEmpty } from '../utils/helpers';
+import { Header } from '../components';
 
 function Home() {
   const navigate = useNavigate();
@@ -13,9 +14,12 @@ function Home() {
   }, [navigate, state?.page]);
 
   return (
-    <Typography mt={2} variant='h6'>
-      Home
-    </Typography>
+    <>
+      <Header />
+      <Typography mt={2} variant='h6'>
+        Home
+      </Typography>
+    </>
   );
 }
 

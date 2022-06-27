@@ -2,11 +2,11 @@ import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 
-import Image from '../../svgs/background.svg';
+import { HeaderBackground } from '../../svgs';
 
 export const AppBarStyled = styled(AppBar)(
   ({ theme }) => `
-  background-image: url(${Image});
+  background-image: url(${HeaderBackground});
   position: relative;
 `,
 );

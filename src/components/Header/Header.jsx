@@ -1,10 +1,8 @@
 import React from 'react';
 import Toolbar from '@mui/material/Toolbar';
 
+import { LeftFlowerIcon, RightFlowerIcon, TitleIcon } from '../../svgs';
 import { AppBarStyled, LeftFlowerStyled, RightFlowerStyled, TitleStyled } from './styles';
-import LeftFlowerIcon from '../../svgs/left-flower.svg';
-import RightFlowerIcon from '../../svgs/right-flower.svg';
-import TitleIcon from '../../svgs/title.svg';
 
 function Header() {
   return (

@@ -9,6 +9,7 @@ import theme from './theme';
 import './App.css';
 
 const Home = lazy(() => import('./routes/Home'));
+const Landing = lazy(() => import('./routes/Landing'));
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,8 @@ function App() {
         <Router>
           <Suspense fallback={<Fallback />}>
             <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/home' element={<Home />} />
+              <Route path='/' element={<Landing />} />
             </Routes>
           </Suspense>
         </Router>

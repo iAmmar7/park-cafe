@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Typography from '@mui/material/Typography';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-import { usePageResource } from '../resources';
+import { isEmpty } from '../utils/helpers';
 
-function AppInit() {
-  const { data } = usePageResource();
+function Home() {
+  const navigate = useNavigate();
+  const { state } = useLocation();
 
-  console.log('result', data);
+  useEffect(() => {
+    if (isEmpty(state?.page)) navigate('/', { replace: true });
+  }, [navigate, state?.page]);
 
-  return <div>Application initializer</div>;
+  return (
+    <Typography mt={2} variant='h6'>
+      Home
+    </Typography>
+  );
 }
 
-export default AppInit;
+export default Home;

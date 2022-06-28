@@ -5,8 +5,8 @@ import { db } from '../utils/firebase';
 
 const usePageClient = () => {
   const fetchPages = useCallback(() => {
-    const citiesCol = collection(db, 'pages');
-    return getDocs(citiesCol);
+    const pagesCol = collection(db, 'pages');
+    return getDocs(pagesCol);
   }, []);
 
   return { fetchPages };

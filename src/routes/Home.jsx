@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
-import Typography from '@mui/material/Typography';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { useCardResource } from '../resources';
 import { isEmpty } from '../utils/helpers';
-import { Header } from '../components';
+import { Header, CardContainer } from '../components';
 
 function Home() {
-  const { refetchCards } = useCardResource();
+  const { data, refetchCards } = useCardResource();
   const navigate = useNavigate();
   const { state } = useLocation();
 
@@ -22,9 +21,7 @@ function Home() {
   return (
     <>
       <Header />
-      <Typography mt={2} variant='h6'>
-        Home
-      </Typography>
+      <CardContainer data={data} />
     </>
   );
 }

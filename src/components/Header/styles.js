@@ -7,7 +7,9 @@ import { HeaderBackground } from '../../svgs';
 export const AppBarStyled = styled(AppBar)(
   ({ theme }) => `
   background-image: url(${HeaderBackground});
+  background-color: #3A3B39;
   position: relative;
+  height: 70px;
 `,
 );
 

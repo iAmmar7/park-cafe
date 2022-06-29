@@ -1,27 +1,26 @@
-import Grid from '@mui/material/Grid';
 import React from 'react';
+import Grid from '@mui/material/Grid';
+import Skeleton from '@mui/material/Skeleton';
+import Box from '@mui/material/Box';
 
 import ItemCard from './ItemCard';
-import { isEmpty } from '../../utils/helpers';
 
 function CardContainer(props) {
-  const { data } = props;
-
-  if (isEmpty(data)) return;
+  const { data, loading } = props;
 
   return (
     <Grid
       container
-      spacing={{ xs: 1, sm: 2, md: 2 }}
-      my={{ xs: 1, sm: 2, md: 1, lg: 0 }}
-      px={{ xs: 1, sm: 2, md: 4 }}
+      wrap='wrap'
       justifyContent='center'
-      flexWrap='wrap'
+      spacing={{ xs: 1, sm: 2, md: 2 }}
+      my={{ xs: 1, sm: 2, md: 1, lg: 2 }}
+      px={{ xs: 1, sm: 2, md: 4 }}
     >
-      {data.map((card) => (
-        <Grid item key={card.id} xs={12} sm={6} md={4} lg={3}>
-          <ItemCard data={card} />
-        </Grid>
+      {(loading ? Array.from(new Array(5)) : data).map((card, index) => (
+        <Box key={index} xs={12} sm={6} md={4} lg={3} sx={{ width: '320px', m: 1 }}>
+          {card ? <ItemCard data={card} /> : <Skeleton animation='wave' variant='rectangular' height={400} />}
+        </Box>
       ))}
     </Grid>
   );

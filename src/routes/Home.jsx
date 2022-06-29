@@ -6,7 +6,7 @@ import { isEmpty } from '../utils/helpers';
 import { Header, CardContainer } from '../components';
 
 function Home() {
-  const { data, refetchCards } = useCardResource();
+  const { data, isLoading, refetchCards } = useCardResource();
   const navigate = useNavigate();
   const { state } = useLocation();
 
@@ -21,7 +21,7 @@ function Home() {
   return (
     <>
       <Header />
-      <CardContainer data={data} />
+      <CardContainer data={data} loading={isLoading} />
     </>
   );
 }

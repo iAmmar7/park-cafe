@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { useCardResource } from '../resources';
 import { isEmpty } from '../utils/helpers';
-import { Header, CardContainer } from '../components';
+import { Header, CardContainer, Footer } from '../components';
 
 function Home() {
   const { data, isLoading, refetchCards } = useCardResource();
@@ -22,6 +22,7 @@ function Home() {
     <>
       <Header />
       <CardContainer data={data} loading={isLoading} />
+      <Footer page={state.page} />
     </>
   );
 }

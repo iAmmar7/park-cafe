@@ -9,7 +9,7 @@ function SocialButton(props) {
   const modHref = name === 'mail' ? `mailto:${href}` : href;
 
   return (
-    <IconButton href={modHref} target='_blank' aria-label={name} size='large' sx={{ padding: 0 }}>
+    <IconButton href={modHref} target='_blank' aria-label={name} size='large' sx={{ padding: 0, boxShadow: 3 }}>
       <img src={Icon} alt={name} width={60} />
     </IconButton>
   );

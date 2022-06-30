@@ -12,3 +12,7 @@ export const CardActionAreaStyled = styled(CardActionArea)(
     }
 `,
 );
+
+export const SectionStyled = styled('section')`
+  min-height: calc(100vh - 82px - 220px - 8px);
+`;

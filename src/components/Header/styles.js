@@ -7,9 +7,10 @@ import { HeaderBackground } from '../../svgs';
 export const AppBarStyled = styled(AppBar)(
   ({ theme }) => `
   background-image: url(${HeaderBackground});
-  background-color: #3A3B39;
+  background-color: ${theme.palette.background};
   position: relative;
-  height: 70px;
+  padding-top: 4px;
+  height: 82px
 `,
 );
 
@@ -22,7 +23,6 @@ export const LeftFlowerStyled = styled('img')`
 
 export const RightFlowerStyled = styled('img')`
   position: absolute;
-  top: -1;
   right: 0;
   width: 80px;
 `;
@@ -32,5 +32,5 @@ export const TitleStyled = styled('img')`
 `;
 
 export const ToolbarStyled = styled(Toolbar)`
-  justifycontent: center;
+  justify-content: center;
 `;

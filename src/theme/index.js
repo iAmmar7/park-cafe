@@ -7,6 +7,7 @@ const theme = createTheme({
   },
   palette: {
     brown: '#D8A08F',
+    background: '#3A3B39',
   },
 });
 

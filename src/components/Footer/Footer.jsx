@@ -3,15 +3,18 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material';
 
 import SocialLinks from '../SocialLinks/SocialLinks';
 import { HeaderBackground, FooterFlowerIcon } from '../../svgs';
+import { FooterStyled } from './styles';
 
 function Footer(props) {
   const { page } = props;
+  const { palette } = useTheme();
 
   return (
-    <footer>
+    <FooterStyled>
       <SocialLinks page={page} />
       <Box
         display='flex'
@@ -20,7 +23,7 @@ function Footer(props) {
         justifyContent='center'
         mt={2}
         pb={1}
-        sx={{ backgroundImage: `url(${HeaderBackground})`, backgroundColor: '#3A3B39', height: '135px' }}
+        sx={{ backgroundImage: `url(${HeaderBackground})`, backgroundColor: palette.background }}
       >
         <Box>
           <img src={FooterFlowerIcon} alt='footer-flower' width={200} />
@@ -37,7 +40,7 @@ function Footer(props) {
           </Typography>
         </Stack>
       </Box>
-    </footer>
+    </FooterStyled>
   );
 }
 

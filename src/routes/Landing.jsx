@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -18,9 +17,6 @@ function Landing() {
   return (
     <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' minHeight='100vh'>
       <CircularProgress size={60} />
-      <Typography mt={2} variant='h6'>
-        Application initializing...
-      </Typography>
     </Box>
   );
 }

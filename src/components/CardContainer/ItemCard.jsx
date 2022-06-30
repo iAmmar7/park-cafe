@@ -15,21 +15,21 @@ function ItemCard(props) {
   return (
     <Card sx={{ position: 'relative', borderRadius: '20px', boxShadow: 3 }}>
       <CardActionAreaStyled component='a' href={data.link} target='_blank'>
-        <CardMedia component='img' height='400' image={data.imageUrl} alt={data.description} />
+        <CardMedia component='img' height={300} image={data.imageUrl} alt={data.description} />
         <CardContent sx={{ position: 'absolute', bottom: -10 }}>
-          <Typography component='h6' color='white' fontWeight={700} fontSize={{ xs: '30px', md: '48px' }}>
+          <Typography component='h6' color='white' fontWeight={700} fontSize={{ xs: '28px', sm: '36px' }}>
             {data.title}
           </Typography>
         </CardContent>
         {data.label && (
           <CardContent sx={{ position: 'absolute', top: 0, right: 0 }}>
             <Box
-              maxWidth={{ xs: 100, md: 200 }}
-              p={{ xs: 2, md: 1 }}
+              maxWidth={{ xs: 100, sm: 150 }}
+              p={{ xs: 2, sm: 1 }}
               textAlign='center'
               sx={{ backgroundColor: palette.brown, borderRadius: '50%' }}
             >
-              <Typography component='h6' color='white' fontStyle='italic' fontSize={{ xs: '20px', md: '28px' }}>
+              <Typography component='h6' color='white' fontStyle='italic' fontSize={{ xs: '16px', sm: '24px' }}>
                 {data.label}
               </Typography>
             </Box>

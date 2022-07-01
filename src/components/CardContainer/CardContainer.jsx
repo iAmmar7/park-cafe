@@ -13,7 +13,7 @@ function CardContainer(props) {
     <SectionStyled>
       <Container maxWidth='1200' sx={{ mt: 2, mb: 4 }}>
         <Grid container wrap='wrap' justifyContent='center' spacing={3}>
-          {(loading ? Array.from(new Array(5)) : data)?.map((card, index) => (
+          {(loading ? Array.from(new Array(4)) : data)?.map((card, index) => (
             <ItemCardGridStyled item key={index}>
               {card ? (
                 <ItemCard data={card} />

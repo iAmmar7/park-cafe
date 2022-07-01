@@ -19,8 +19,14 @@ const useCardResource = () => {
   );
 
   const cards = useMemo(() => {
-    return data?.docs.map((doc) => doc.data());
-  }, [data]);
+    const cardData = data?.docs.map((doc) => doc.data());
+    const sortedCards = cardIds.reduce((acc, id) => {
+      const card = cardData?.find((c) => c.id === id);
+      if (card) return [...acc, card];
+      return acc;
+    }, []);
+    return sortedCards;
+  }, [cardIds, data?.docs]);
 
   return { data: cards, error, isLoading, refetchCards };
 };

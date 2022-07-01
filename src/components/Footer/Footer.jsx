@@ -30,13 +30,14 @@ function Footer(props) {
           <img src={FooterFlowerIcon} alt='footer-flower' width={200} />
         </Box>
         <Stack direction='row' divider={<Divider orientation='vertical' flexItem color='white' />} spacing={1}>
-          <Typography variant='h5' color='white' fontStyle='italic'>
+          <Typography variant='h5' color='white' fontStyle='italic' fontSize={{ xs: '18px', sm: '20px', md: '24px' }}>
             Parkcafé
           </Typography>
           <Typography
             variant='h5'
             color='white'
             fontStyle='italic'
+            fontSize={{ xs: '18px', sm: '20px', md: '24px' }}
             component={Link}
             href={page.imprint}
             target='_blank'
@@ -48,6 +49,7 @@ function Footer(props) {
             variant='h5'
             color='white'
             fontStyle='italic'
+            fontSize={{ xs: '18px', sm: '20px', md: '24px' }}
             component={Link}
             href={page.privacy}
             target='_blank'

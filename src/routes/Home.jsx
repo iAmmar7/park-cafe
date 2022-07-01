@@ -18,6 +18,8 @@ function Home() {
     refetchCards(state?.page?.cards);
   }, [refetchCards, state?.page?.cards]);
 
+  console.log('state', state.page);
+
   return (
     <>
       <Header />

@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import { useTheme } from '@mui/material';
 
 import SocialLinks from '../SocialLinks/SocialLinks';
@@ -32,10 +33,26 @@ function Footer(props) {
           <Typography variant='h5' color='white' fontStyle='italic'>
             Parkcafé
           </Typography>
-          <Typography variant='h5' color='white' fontStyle='italic'>
+          <Typography
+            variant='h5'
+            color='white'
+            fontStyle='italic'
+            component={Link}
+            href={page.imprint}
+            target='_blank'
+            sx={{ textDecoration: 'none' }}
+          >
             Impressum
           </Typography>
-          <Typography variant='h5' color='white' fontStyle='italic'>
+          <Typography
+            variant='h5'
+            color='white'
+            fontStyle='italic'
+            component={Link}
+            href={page.privacy}
+            target='_blank'
+            sx={{ textDecoration: 'none' }}
+          >
             Datenschutz
           </Typography>
         </Stack>

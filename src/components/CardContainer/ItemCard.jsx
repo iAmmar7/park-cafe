@@ -13,7 +13,7 @@ function ItemCard(props) {
   const { data } = props;
 
   return (
-    <Card sx={{ position: 'relative', borderRadius: '20px', boxShadow: 3 }}>
+    <Card sx={{ position: 'relative', borderRadius: '20px' }}>
       <CardActionAreaStyled component='a' href={data.link} target='_blank'>
         <CardMedia component='img' height={300} image={data.imageUrl} alt={data.description} />
         <CardContent sx={{ position: 'absolute', bottom: -10 }}>

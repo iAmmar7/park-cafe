@@ -10,7 +10,7 @@ export const AppBarStyled = styled(AppBar)(
   background-color: ${theme.palette.background};
   position: relative;
   padding-top: 4px;
-  height: 82px
+  height: 82px;
 `,
 );
 

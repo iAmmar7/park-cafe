@@ -6,15 +6,13 @@ import { AppBarStyled, LeftFlowerStyled, RightFlowerStyled, TitleStyled } from '
 
 function Header() {
   return (
-    <header>
-      <AppBarStyled>
-        <Toolbar sx={{ justifyContent: 'center' }}>
-          <LeftFlowerStyled src={LeftFlowerIcon} alt='flower' />
-          <TitleStyled src={TitleIcon} alt='title' />
-          <RightFlowerStyled src={RightFlowerIcon} alt='flower' />
-        </Toolbar>
-      </AppBarStyled>
-    </header>
+    <AppBarStyled>
+      <Toolbar sx={{ justifyContent: 'center' }}>
+        <LeftFlowerStyled src={LeftFlowerIcon} alt='flower' />
+        <TitleStyled src={TitleIcon} alt='title' />
+        <RightFlowerStyled src={RightFlowerIcon} alt='flower' />
+      </Toolbar>
+    </AppBarStyled>
   );
 }
 

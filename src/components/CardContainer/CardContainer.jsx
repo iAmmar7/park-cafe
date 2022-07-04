@@ -4,14 +4,14 @@ import Skeleton from '@mui/material/Skeleton';
 import Container from '@mui/material/Container';
 
 import ItemCard from './ItemCard';
-import { ItemCardGridStyled } from './styles';
+import { MainStyled, ItemCardGridStyled } from './styles';
 
 function CardContainer(props) {
   const { data, loading } = props;
 
   return (
-    <section>
-      <Container maxWidth='1200' sx={{ mt: 2, mb: 4 }}>
+    <MainStyled>
+      <Container>
         <Grid container wrap='wrap' justifyContent='center' spacing={3}>
           {(loading ? Array.from(new Array(4)) : data)?.map((card, index) => (
             <ItemCardGridStyled item key={index}>
@@ -24,7 +24,7 @@ function CardContainer(props) {
           ))}
         </Grid>
       </Container>
-    </section>
+    </MainStyled>
   );
 }
 

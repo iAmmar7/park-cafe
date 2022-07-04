@@ -1,30 +1,24 @@
 import React, { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 
+import { withPageDetails } from '../hoc';
 import { useCardResource } from '../resources';
-import { isEmpty } from '../utils/helpers';
 import { Header, CardContainer, Footer } from '../components';
 
-function Home() {
+function Home(props) {
+  const { page } = props;
   const { data, isLoading, refetchCards } = useCardResource();
-  const navigate = useNavigate();
-  const { state } = useLocation();
 
   useEffect(() => {
-    if (isEmpty(state?.page)) navigate('/', { replace: true });
-  }, [navigate, state?.page]);
-
-  useEffect(() => {
-    refetchCards(state?.page?.cards);
-  }, [refetchCards, state?.page?.cards]);
+    refetchCards(page?.cards);
+  }, [refetchCards, page?.cards]);
 
   return (
     <>
       <Header />
       <CardContainer data={data} loading={isLoading} />
-      <Footer page={state.page} />
+      <Footer page={page} />
     </>
   );
 }
 
-export default Home;
+export default withPageDetails(Home);

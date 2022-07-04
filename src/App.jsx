@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
@@ -9,7 +9,6 @@ import theme from './theme';
 import './App.css';
 
 const Home = lazy(() => import('./routes/Home'));
-const Landing = lazy(() => import('./routes/Landing'));
 
 const queryClient = new QueryClient();
 
@@ -20,8 +19,8 @@ function App() {
         <Router>
           <Suspense fallback={<Fallback />}>
             <Routes>
-              <Route path='/home' element={<Home />} />
-              <Route path='/' element={<Landing />} />
+              <Route path='/' element={<Home />} />
+              <Route path='*' element={<Navigate to='/' replace />} />
             </Routes>
           </Suspense>
         </Router>

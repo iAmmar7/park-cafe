@@ -7,10 +7,6 @@ export const CardActionAreaStyled = styled(CardActionArea)(
     .MuiCardActionArea-focusHighlight {
       background: transparent;
     };
-    transition: all .5s;
-    &:hover {
-      opacity: 0.9;
-    }
 `,
 );
 

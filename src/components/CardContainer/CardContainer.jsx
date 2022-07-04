@@ -11,7 +11,7 @@ function CardContainer(props) {
 
   return (
     <MainStyled>
-      <Container>
+      <Container maxWidth={false} sx={{ maxWidth: '1600px' }}>
         <Grid container wrap='wrap' justifyContent='center' spacing={3}>
           {(loading ? Array.from(new Array(4)) : data)?.map((card, index) => (
             <ItemCardGridStyled item key={index}>

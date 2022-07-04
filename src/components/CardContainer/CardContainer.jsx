@@ -4,13 +4,13 @@ import Skeleton from '@mui/material/Skeleton';
 import Container from '@mui/material/Container';
 
 import ItemCard from './ItemCard';
-import { SectionStyled, ItemCardGridStyled } from './styles';
+import { ItemCardGridStyled } from './styles';
 
 function CardContainer(props) {
   const { data, loading } = props;
 
   return (
-    <SectionStyled>
+    <section>
       <Container maxWidth='1200' sx={{ mt: 2, mb: 4 }}>
         <Grid container wrap='wrap' justifyContent='center' spacing={3}>
           {(loading ? Array.from(new Array(4)) : data)?.map((card, index) => (
@@ -24,7 +24,7 @@ function CardContainer(props) {
           ))}
         </Grid>
       </Container>
-    </SectionStyled>
+    </section>
   );
 }
 

@@ -18,7 +18,3 @@ export const ItemCardGridStyled = styled(Grid)(
     }
 `,
 );
-
-export const SectionStyled = styled('section')`
-  min-height: calc(100vh - 82px - 220px + 8px);
-`;

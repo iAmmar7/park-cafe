@@ -13,7 +13,7 @@ function withPageDetails(Component) {
 
     return (
       <Box display='flex' flexDirection='column' justifyContent='center' alignItems='center' minHeight='100vh'>
-        <CircularProgress size={60} />
+        <CircularProgress size={60} color='background' />
       </Box>
     );
   };

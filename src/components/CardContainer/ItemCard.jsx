@@ -27,7 +27,7 @@ function ItemCard(props) {
       }}
     >
       {isVideo ? (
-        <YouTubeVideo link={data.video} title={data.description} sx={{ border: 'none' }} />
+        <YouTubeVideo link={data.video} title={data.description} autoPlay={data.autoplay} sx={{ border: 'none' }} />
       ) : (
         <CardActionAreaStyled component='a' href={data.link} target='_blank'>
           <CardMedia component='img' height={300} image={data.imageUrl} alt={data.description} />

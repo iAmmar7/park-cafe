@@ -10,7 +10,7 @@ function YouTubeVideo(props) {
     <CardMedia
       component='iframe'
       height={height}
-      src={`https://www.youtube.com/embed/${embedId}?rel=0&amp;autoplay=${autoPlay}&mute=${autoPlay}&controls=${controls}`}
+      src={`https://www.youtube.com/embed/${embedId}?playlist=${embedId}&loop=1&autoplay=${autoPlay}&mute=${autoPlay}&controls=${controls}`}
       allowFullScreen
       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
       title={title}

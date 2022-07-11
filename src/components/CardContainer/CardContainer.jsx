@@ -9,8 +9,6 @@ import { MainStyled, ItemCardGridStyled } from './styles';
 function CardContainer(props) {
   const { data, loading } = props;
 
-  console.log('data', data);
-
   return (
     <MainStyled>
       <Container maxWidth={false} sx={{ maxWidth: '1600px' }}>
